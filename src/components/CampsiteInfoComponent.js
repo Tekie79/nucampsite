@@ -10,7 +10,7 @@ class CampsiteInfo extends Component {
           <CardImg top src={campsite.image} alt={campsite.name} />
           <CardBody>
             <CardTitle>{campsite.name}</CardTitle>
-            <CardText>{this.props.campsite.description}</CardText>
+            <CardText>{campsite.description}</CardText>
           </CardBody>
         </Card>
       </div>
@@ -46,9 +46,11 @@ class CampsiteInfo extends Component {
     const campsite = this.props.campsite;
     if (campsite) {
       return (
-        <div className="row">
-          {this.renderCampsite(campsite)}
-          {this.renderComments(this.props.campsite.comments)}
+        <div className="container">
+          <div className="row">
+            {this.renderCampsite(campsite)}
+            {this.renderComments(this.props.campsite.comments)}
+          </div>
         </div>
       );
     }
