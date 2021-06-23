@@ -10,9 +10,15 @@ import {
 import { Link } from "react-router-dom";
 import { Loading } from "./LoadingComponent";
 import { baseUrl } from "../shared/baseUrl";
+import { FadeTransform} from "react-animation-components";
+
 
 function RenderDirectoryItem({ campsite }) {
   return (
+    <FadeTransform 
+    in
+    transformProps={{ exitTransform: "scale(0.5) translateY(50%)" }}
+    >
     <Card>
       <Link to={`/directory/${campsite.id}`}>
         <CardImg width="100%" src={baseUrl + campsite.image} alt={campsite.name} />
@@ -21,6 +27,7 @@ function RenderDirectoryItem({ campsite }) {
         </CardImgOverlay>
       </Link>
     </Card>
+    </FadeTransform>
   );
 }
 
