@@ -18,7 +18,7 @@ function RenderPartner({ partner }) {
       <React.Fragment>
         <Media
           object
-          src={baseUrl + partner.image}
+          src={partner.image}
           alt={partner.name}
           width="150"
         />
