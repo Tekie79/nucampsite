@@ -30,7 +30,7 @@ function RenderCampsite({ campsite }) {
         transformProps={{ exitTransform: "scale(0.5) translateY(-50%)" }}
       >
         <Card>
-          <CardImg top src={baseUrl + campsite.image} alt={campsite.name} />
+          <CardImg top src={campsite.image} alt={campsite.name} />
           <CardBody>
             <CardText>{campsite.description}</CardText>
           </CardBody>
